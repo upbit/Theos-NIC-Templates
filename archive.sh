@@ -1,24 +1,17 @@
 #! /bin/bash
 
-rm -rf Archived\ Templates
+THEOS_ROOT="/opt/theos"
 
-mkdir Archived\ Templates
-
+mkdir -p Archived\ Templates
+rm -f Archived\ Templates/*.tar
 cd Archived\ Templates
 
-~/Developer/Jailbreak/theos/bin/nicify.pl ../CCLoader_Plugin.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../Flipswitch_Toggle.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../Notification_Center_Widget.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../Preference_Bundle.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../XPC_Service.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../Tweak.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../Command_Line_Interface.nic
-
-~/Developer/Jailbreak/theos/bin/nicify.pl ../Dynamic_Library.nic
+${THEOS_ROOT}/bin/nicify.pl ../CCLoader_Plugin.nic
+${THEOS_ROOT}/bin/nicify.pl ../Flipswitch_Toggle.nic
+${THEOS_ROOT}/bin/nicify.pl ../Notification_Center_Widget.nic
+${THEOS_ROOT}/bin/nicify.pl ../Preference_Bundle.nic
+${THEOS_ROOT}/bin/nicify.pl ../XPC_Service.nic
+${THEOS_ROOT}/bin/nicify.pl ../Tweak.nic
+${THEOS_ROOT}/bin/nicify.pl ../Command_Line_Interface.nic
+${THEOS_ROOT}/bin/nicify.pl ../Dynamic_Library.nic
 cd ..
